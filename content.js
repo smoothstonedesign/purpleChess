@@ -1,3 +1,10 @@
+// Editable variables
+
+const THRESHOLD = 25; // (percentage difference for max colors)
+const DARK_BLUE = [0, 0, 139]; // advantage color [r,g,b]
+const DARK_RED = [139, 0, 0]; // disadvantage color [r,g,b]
+const REFRESH_RATE = 50; // in milliseconds
+
 function parseTime(timeStr) {
   // Handle m:ss format
   if (timeStr.includes(':')) {
@@ -11,11 +18,6 @@ function parseTime(timeStr) {
 function getColorFromTimeDifference(playerSeconds, opponentSeconds) {
   // Calculate percentage difference
   const percentDiff = ((playerSeconds - opponentSeconds) / opponentSeconds) * 100;
-  
-  // Define threshold and colors
-  const THRESHOLD = 25;
-  const DARK_RED = [139, 0, 0];
-  const DARK_BLUE = [0, 0, 139];
   
   if (percentDiff <= -THRESHOLD) {
     // Maximum deficit: dark red
@@ -55,8 +57,8 @@ function updateBackgroundColor() {
   document.body.style.backgroundColor = newColor;
 }
 
-// Update color every 5 ms
-setInterval(updateBackgroundColor, 5);
+// Update color every REFRESH_RATE 
+setInterval(updateBackgroundColor, REFRESH_RATE);
 
 // Initial update
 updateBackgroundColor();

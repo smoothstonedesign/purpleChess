@@ -1,6 +1,6 @@
-# Chess Clock Accessibility Plugin
+# purpleChess - Clock Accessibility Plugin
 
-A Chrome extension that provides visual feedback for chess time management by changing the background color based on the relative time difference between players. The background shifts between dark blue (time advantage) and dark red (time deficit) to help players quickly gauge their time situation.
+A Chrome extension that provides visual feedback for chess.com time management by changing the background color based on the relative time difference between players. The background shifts between dark blue (time advantage) and dark red (time deficit) to help players quickly gauge their time situation.
 
 ## Features
 
@@ -15,7 +15,7 @@ A Chrome extension that provides visual feedback for chess time management by ch
 
 ## Installation
 
-1. Clone this repository or download the source code
+1. Clone this repository or download the source code (if you dont know "code", relax, this is just two files in a folder, baby. You can download them to your computer and upload them "unpacked")
 ```bash
 git clone [repository-url]
 ```
