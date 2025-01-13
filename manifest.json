@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "PurpleChess",
+  "version": "1.1",
+  "description": "Changes background color based on chess clock time differences",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.chess.com/game/live/*", "https://www.chess.com/analysis/game/live/*", "https://www.chess.com/play/online/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
