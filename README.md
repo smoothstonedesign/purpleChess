@@ -1,4 +1,4 @@
-# purpleChess - Clock Accessibility Plugin
+# purpleChess - Clock Accessibility Plugin for chess.com
 
 A Chrome extension that provides visual feedback for chess.com time management by changing the background color based on the relative time difference between players. The background shifts between dark blue (time advantage) and dark red (time deficit) to help players quickly gauge their time situation.
 
@@ -6,7 +6,7 @@ A Chrome extension that provides visual feedback for chess.com time management b
 
 - Real-time visual feedback through background color changes
 - Smooth gradient transition between time states
-- Updates every 50ms for responsive feedback
+- Updates every 5ms for responsive feedback
 - Works on chess.com live games
 - Color coding:
   - Dark blue: 20% or more time advantage
@@ -35,8 +35,8 @@ git clone [repository-url]
 2. The plugin will automatically activate and begin monitoring the time difference
 
 3. Background colors indicate:
-   - Dark blue: You have ≥20% more time than your opponent
-   - Dark red: You have ≥20% less time than your opponent
+   - Dark blue: You have 25% or more time than your opponent
+   - Dark red: You have 25% or less time than your opponent
    - Gradient: Proportional blend showing relative time difference
 
 ## Technical Details
@@ -53,7 +53,7 @@ The extension consists of two main files:
 - Parses time formats (m:ss and m:s.ds)
 - Calculates relative time differences
 - Updates background color using RGB interpolation
-- Polls every 50ms for smooth updates
+- Polls every 5ms for smooth updates
 
 ## Development
 
@@ -64,19 +64,9 @@ To modify the extension:
 3. Refresh the chess.com page
 
 Key parameters that can be adjusted:
-- `THRESHOLD`: Currently set to 20 (percentage difference for max colors)
-- Update frequency: Currently set to 50ms
+- `THRESHOLD`: Currently set to 25 (percentage difference for max colors)
+- Update frequency: Currently set to 5ms
 - Color values: Currently using rgb(139, 0, 0) for red and rgb(0, 0, 139) for blue
-
-## Contributing
-
-Contributions are welcome! Some potential areas for improvement:
-
-- Add configuration options for colors and thresholds
-- Support for additional chess websites
-- Additional time format parsing
-- Customizable update frequency
-- Alternative visual feedback methods
 
 ## License
 

@@ -3,7 +3,7 @@
 const THRESHOLD = 25; // (percentage difference for max colors)
 const DARK_BLUE = [0, 0, 139]; // advantage color [r,g,b]
 const DARK_RED = [139, 0, 0]; // disadvantage color [r,g,b]
-const REFRESH_RATE = 50; // in milliseconds
+const REFRESH_RATE = 5; // in milliseconds
 
 function parseTime(timeStr) {
   // Handle m:ss format
